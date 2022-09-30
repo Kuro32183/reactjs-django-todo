@@ -1,2 +1,2 @@
-web: gunicorn react-django-32183.wsgi:application --log-file - --log-level debug
+web: gunicorn sampleapi.wsgi:application --log-file - --log-level debug
 manage.py migrate
