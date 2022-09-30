@@ -1,1 +1,1 @@
-web: gunicorn sampleapi.wsgi
+web: gunicorn restapi.wsgi
