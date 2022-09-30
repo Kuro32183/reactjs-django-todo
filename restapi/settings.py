@@ -17,14 +17,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
+SECRET_KEY = 'django-insecure-54@v5&8_m!o7a1bg0f+9nxv($kgq9k++vcz8ekkx8vy%lz27am'
+
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-try:
-    from .local_settings import *
-except ImportError:
-    pass
 
 ALLOWED_HOSTS = ['*']
 
@@ -32,6 +30,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'api.apps.ApiConfig',
     'corsheaders',
+    'django.contrib.staticfiles',
 ]
 
 MIDDLEWARE = [
@@ -112,6 +112,10 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+WHITENOISE_USE_FINDERS = True #NEW
+
+
+
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -141,18 +145,14 @@ STATICFILES_DIRS = (
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #Heroku database
-import dj_database_url
-db_from_env = dj_database_url.config()
+db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
-db_from_env = dj_database_url.config(conn_max_age=600,
-ssl_require=True)
-DATABASES['default'].update(db_from_env)
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 try:
  from .local_settings import *
 except ImportError:
  pass
 if not DEBUG:
-  # SECURITY WARNING: keep the secret key used in production secret!
- SECRET_KEY = 'django-insecure-54@v5&8_m!o7a1bg0f+9nxv($kgq9k++vcz8ekkx8vy%lz27am'
  import django_heroku
  django_heroku.settings(locals())
