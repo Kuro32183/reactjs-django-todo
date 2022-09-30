@@ -3,6 +3,7 @@ certifi
 dj-database-url==1.0.0
 Django
 django-cors-headers==3.7.0
+django-environ==0.9.0
 django-heroku==0.3.1
 djangorestframework==3.12.4
 gunicorn==20.1.0
