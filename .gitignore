@@ -2,7 +2,4 @@ myvenv
 db.sqlite3
 .DS_Store
 local_settings.py
-sampleapi/static/
-staticfiles
-.vscode
 __pycache__
