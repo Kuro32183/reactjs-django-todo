@@ -1,8 +1,9 @@
-asgiref==3.3.4
-certifi==2020.12.5
-Django==3.2.3
+asgiref @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_edg6nzjrx0/croots/recipe/asgiref_1661287549316/work
+certifi @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_05nm_gqf36/croots/recipe/certifi_1663615689491/work/certifi
+Django @ file:///tmp/build/80754af9/django_1620913015185/work
 django-cors-headers==3.7.0
 djangorestframework==3.12.4
-pytz==2021.1
-sqlparse==0.4.1
-gunicorn
+gunicorn==20.1.0
+psycopg2 @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_973rh8dnaq/croots/recipe/psycopg2_1662147652256/work
+pytz @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_1caf090c-01b6-4973-adac-d2eb884a674e7zonb9eb/croots/recipe/pytz_1654762641285/work
+sqlparse @ file:///tmp/build/80754af9/sqlparse_1602184451250/work
