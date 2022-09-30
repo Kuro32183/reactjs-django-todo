@@ -1,9 +1,12 @@
 asgiref @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_edg6nzjrx0/croots/recipe/asgiref_1661287549316/work
 certifi @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_05nm_gqf36/croots/recipe/certifi_1663615689491/work/certifi
+dj-database-url==1.0.0
 Django @ file:///tmp/build/80754af9/django_1620913015185/work
 django-cors-headers==3.7.0
+django-heroku==0.3.1
 djangorestframework==3.12.4
 gunicorn==20.1.0
 psycopg2 @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_973rh8dnaq/croots/recipe/psycopg2_1662147652256/work
 pytz @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_1caf090c-01b6-4973-adac-d2eb884a674e7zonb9eb/croots/recipe/pytz_1654762641285/work
 sqlparse @ file:///tmp/build/80754af9/sqlparse_1602184451250/work
+whitenoise==6.2.0
